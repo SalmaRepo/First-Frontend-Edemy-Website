@@ -1,0 +1,118 @@
+form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0 2rem 0;
+  margin-top: 1rem;
+ 
+
+  fieldset {
+    border: none;
+    text-align: center;
+    legend {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .loginout {
+    a {
+      display: block;
+      width: 80%;
+      margin: 2rem auto;
+      text-align: center;
+      text-decoration: none;
+      font-size: 2rem;
+      color: black;
+      border: 2px solid black;
+      padding: 2rem;
+
+      i {
+        margin-right: 2rem;
+        font-size: 3rem;
+      }
+
+      .fa-google {
+        color: green;
+      }
+      .fa-facebook {
+        color: blue;
+      }
+
+      .fa-apple {
+        font-size: 3rem;
+        margin-right: 3.5rem;
+      }
+    }
+  }
+
+  %emailandpass {
+    width: 80%;
+    margin: 2rem 1rem 2rem 3rem;
+    padding: 2rem;
+    color: black;
+    border: 2px solid black;
+  }
+
+  #email,
+  #pass {
+    @extend %emailandpass;
+  }
+
+  #email::placeholder,
+  #pass::placeholder {
+    color: black;
+    font-size: 2rem;
+  }
+
+  button{
+    @extend %emailandpass;
+    background-color: rgb(7, 163, 224);
+    color: white;
+    font-size:2rem;
+    font-weight: bold;
+    border: 0;
+  }
+
+  %forgot{
+    border-bottom: 1px solid rgb(133, 128, 128);
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .forgot,p{
+   @extend %forgot;
+    a{
+        color: blue;
+        font-weight: bold;
+    }
+  }
+  p{
+    border-bottom: 0;
+  }
+}
+ 
+
+footer {
+
+  height: 30rem;
+
+  .topfoot{
+   margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  form {
+    width: 30%;
+
+    #email,
+    #pass ,button{
+        margin: 2rem 1rem 2rem 5rem;;
+    }
+  
+  }
+}

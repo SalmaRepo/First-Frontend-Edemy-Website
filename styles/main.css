@@ -1,0 +1,1049 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&family=Plus+Jakarta+Sans&Rubik:wght@100&family=Montserrat&family=Montserrat&family=Montserrat+Alternates:wght@900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  box-shadow: 0 0.5rem 8rem 3rem rgb(230, 225, 225);
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+header .offer-disp {
+  width: 100%;
+  background-color: rgba(177, 205, 216, 0.359);
+  padding: 1.5rem;
+  text-align: center;
+  color: rgb(23, 23, 24);
+}
+header .offer-disp .offerDisptime {
+  color: blueviolet;
+  animation: offertime 1.5s ease-in-out 1s infinite forwards;
+  margin: 0 2px;
+}
+header .logo {
+  text-decoration: none;
+}
+header .logo h1 {
+  font-family: "Montserrat Alternates", sans-serif;
+  color: rgb(9, 168, 168);
+  text-shadow: 2px 2px 2px black;
+  font-size: 4rem;
+}
+header nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+header nav .navStart .cathead {
+  display: none;
+}
+header nav .navStart .cathead .catarrow {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+header nav .navStart .cathead:focus {
+  color: black;
+}
+header nav .navStart .cathead:focus .catarrow {
+  transform: rotate(180deg);
+}
+header nav .navStart .catarrow:focus .categories {
+  transform: rotate(180deg);
+}
+header nav .burger {
+  text-decoration: none;
+}
+header nav .burger i {
+  display: flex;
+  color: rgb(65, 62, 62);
+  font-size: 2.5rem;
+}
+header nav .burger:focus ~ .categories {
+  display: inline-block;
+  overflow: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+header nav .burger:focus ~ .closebutton {
+  display: inline;
+  position: absolute;
+  left: 28rem;
+  top: 2.5rem;
+  animation: burger 1s ease-in-out 0.5s backwards;
+  animation: closebutton 0.5s ease 0.3s forwards;
+}
+header nav .categories {
+  display: none;
+  background-color: white;
+  padding: 1rem;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  font-weight: bold;
+  text-align: justify;
+  animation: burger 1s ease forwards;
+}
+header nav .categories h5 {
+  display: none;
+}
+header nav .categories h4 {
+  font-size: 1.1rem;
+  padding-left: 0;
+  margin-top: 1rem;
+  text-align: left;
+  font-weight: bold;
+  color: rgb(109, 104, 104);
+}
+header nav .categories ul {
+  background-color: white;
+  margin-top: 1rem;
+  padding: 0 5rem 0.5rem 0;
+  border-bottom: 1px solid gray;
+}
+header nav .categories ul li {
+  list-style-type: none;
+  padding: 0.5rem 0;
+}
+header nav .categories ul li a {
+  text-decoration: none;
+  color: rgba(51, 49, 49, 0.966);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+header nav .categories .login li a {
+  color: blue;
+}
+header nav .categories::-webkit-scrollbar {
+  width: 5px;
+}
+header nav .categories::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgb(144, 145, 146);
+}
+header nav .closebutton {
+  display: none;
+  font-size: 2.5rem;
+  padding: 1rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.759);
+  border-radius: 50%;
+  border: 2px solid rgb(235, 226, 226);
+}
+header nav .translate i {
+  margin-top: 1rem;
+  padding: 0.5rem 5rem 0.5rem 1rem;
+  border: 2px solid rgb(80, 77, 77);
+  text-align: left;
+}
+header .translate i::after {
+  content: "English";
+  color: rgb(66, 64, 64);
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 1rem;
+}
+header .navend {
+  display: flex;
+  gap: 3rem;
+}
+header .navend i {
+  color: rgb(65, 62, 62);
+  font-size: 2rem;
+}
+header .navend .business,
+header .navend .teach,
+header .navend .logindesk,
+header .navend .signin,
+header .navend .desktranslate {
+  display: none;
+}
+
+@keyframes offertime {
+  from {
+    color: rgb(74, 116, 153);
+  }
+  to {
+    color: rgb(145, 63, 145);
+  }
+}
+@keyframes burger {
+  0% {
+    transform: translateX(-0.5rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes closebutton {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: translateX(1.5);
+  }
+}
+@media (min-width: 769px) and (max-width: 1279px) {
+  header nav {
+    padding: 0 1rem;
+  }
+  header nav .navStart .burger i {
+    display: none;
+  }
+  header nav .navStart .cathead {
+    display: flex;
+    color: rgb(32, 31, 31);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(70, 68, 68);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  header nav .navStart .cathead .cathead:hover {
+    color: blue;
+  }
+  header nav .navStart .cathead .catarrow {
+    margin-left: 1rem;
+  }
+  header nav .navStart .cathead .catarrow:hover {
+    transform: rotate(180deg);
+  }
+  header nav .navStart .cathead:focus ~ .categories {
+    display: inline-block;
+    position: absolute;
+    height: 50vh;
+    animation: burgerdesk 0.5s ease-out 0.1s forwards;
+  }
+  header nav .navStart .cathead:hover ~ .catarrow {
+    transform: rotate(180deg);
+  }
+  header nav .navStart .catarrow:focus ~ .categories {
+    transform: rotate(180deg);
+  }
+  header nav .navStart .categories {
+    margin-top: 2rem;
+    border: 1px solid rgb(165, 161, 161);
+    animation: none;
+  }
+  header nav .navStart .categories .popularCats {
+    border-bottom: none;
+    margin-top: 0.3rem;
+    padding-right: 5rem;
+  }
+  header nav .navStart .categories .popularCats li a {
+    font-size: 1.3rem;
+    letter-spacing: 0;
+  }
+  header nav .navStart .categories .popularCats li a:hover {
+    color: blue;
+  }
+  header nav .navStart .categories .login,
+  header nav .navStart .categories h4,
+  header nav .navStart .categories .more,
+  header nav .navStart .categories .translate {
+    display: none;
+  }
+  header nav .logo {
+    display: flex;
+    order: -1;
+  }
+  header nav .navend {
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+  }
+  header nav .navend .teach,
+  header nav .navend .logindesk,
+  header nav .navend .signin,
+  header nav .navend .desktranslate {
+    display: inline;
+    border: 1px solid black;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: bold;
+    padding: 0.5rem;
+    background-color: white;
+    font-size: 1.2rem;
+    justify-content: center;
+    text-decoration: none;
+  }
+  header nav .navend .logindesk {
+    color: black;
+  }
+  header nav .navend .teach,
+  header nav .navend .business {
+    border: 0;
+    color: gray;
+    font-size: 1.3rem;
+  }
+  header nav .navend .signin {
+    background-color: black;
+    color: white;
+  }
+  header nav .navend .fa-magnifying-glass {
+    order: -1;
+    width: 50%;
+    padding: 1rem;
+    border: 1px solid gray;
+    border-radius: 1.5rem;
+  }
+  header nav .navend .fa-magnifying-glass::after {
+    content: "search anything";
+    color: gray;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+  }
+  header nav .navend .desktranslate {
+    padding-top: 0.5rem;
+  }
+}
+@keyframes burgerdesk {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+@media (min-width: 1280px) {
+  header nav {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+  header nav .navStart .burger i {
+    display: none;
+  }
+  header nav .navStart .cathead {
+    display: flex;
+    color: rgb(32, 31, 31);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(71, 71, 71);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  header nav .navStart .cathead:focus ~ .categories {
+    display: inline-block;
+    position: absolute;
+    height: 50vh;
+  }
+  header nav .navStart .categories {
+    margin-top: 2rem;
+    border: 1px solid rgb(165, 161, 161);
+  }
+  header nav .navStart .categories ul {
+    border-bottom: none;
+    margin-top: 1rem;
+  }
+  header nav .navStart .categories ul li a {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+  }
+  header nav .navStart .categories ul li a:hover {
+    color: blue;
+  }
+  header nav .navStart .categories .login,
+  header nav .navStart .categories h4,
+  header nav .navStart .categories .more,
+  header nav .navStart .categories .translate {
+    display: none;
+  }
+  header nav .logo {
+    display: flex;
+    order: -1;
+  }
+  header nav .navend {
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+  }
+  header nav .navend .business,
+  header nav .navend .teach,
+  header nav .navend .logindesk,
+  header nav .navend .signin,
+  header nav .navend .desktranslate {
+    display: inline;
+    border: 1px solid black;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: bold;
+    padding: 0.5rem;
+    background-color: white;
+    font-size: 1.5rem;
+    justify-content: center;
+    text-decoration: none;
+  }
+  header nav .navend .logindesk {
+    color: black;
+  }
+  header nav .navend .teach,
+  header nav .navend .business {
+    border: 0;
+    color: gray;
+    font-size: 1.5rem;
+  }
+  header nav .navend .signin {
+    background-color: black;
+    color: white;
+  }
+  header nav .navend .fa-magnifying-glass {
+    order: -1;
+    width: 50%;
+    padding: 1rem;
+    border: 1px solid gray;
+    border-radius: 1.5rem;
+  }
+  header nav .navend .fa-magnifying-glass::after {
+    content: "search anything";
+    color: gray;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+  header nav .navend .desktranslate {
+    padding-top: 0.5rem;
+  }
+}
+main {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+main .topimg {
+  width: 100%;
+  padding: 15rem 0;
+  background: no-repeat top/100% url("../images/headerimg.jpg");
+  background-size: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .topimg h4 {
+  width: 30%;
+  font-size: 2rem;
+  color: rgb(10, 10, 10);
+  text-align: center;
+  background-color: rgba(181, 216, 223, 0.766);
+  filter: opacity(10px);
+  padding: 5rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  animation: imgcard 3s ease 0.5s forwards;
+}
+main .topimg:hover {
+  background: no-repeat right bottom/100% url("../images/headerimg6.jpg");
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-size: contain;
+  animation: secondimg 3s ease-in 3s;
+}
+@keyframes secondimg {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-0.5rem);
+  }
+}
+main .maincont {
+  width: 80%;
+  margin: 0 auto;
+}
+main .maincont .cards {
+  width: 100%;
+  margin: 7rem auto;
+  text-align: center;
+  padding-bottom: 10rem;
+}
+main .maincont .cards .cardnav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .maincont .cards .cardnav li {
+  list-style: none;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgb(112, 109, 109);
+}
+main .maincont .cards .cardnav .closecard {
+  font-size: 2rem;
+  display: inline;
+  position: absolute;
+  right: 0;
+}
+main .maincont .cards .cardnav .closecard:focus {
+  animation: closebutton 0.5s ease backwards reverse;
+}
+main .maincont .cards .cardnav .js {
+  text-decoration: none;
+  color: gray;
+  font-weight: bold;
+}
+main .maincont .cards .cardnav .js:hover {
+  color: rgb(44, 43, 43);
+}
+main .maincont .cards .cardnav .js:focus ~ .jscard {
+  background-color: white;
+  height: 80vh;
+  position: relative;
+  display: flex;
+}
+main .maincont .cards .cardnav .js:focus ~ .jscard .jscardchild {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+  position: absolute;
+  left: 0;
+}
+main .maincont .cards .cardnav .js:focus ~ .closecard {
+  animation: closebutton 0.5s ease forwards;
+}
+main .maincont .cards .cardnav .jscard {
+  display: none;
+  position: absolute;
+  left: 0;
+}
+main .maincont .cards .cardnav .closecard:focus .jscard {
+  display: none;
+}
+main .maincont .cards .cardnav .jscardchild {
+  overflow: auto;
+}
+main .maincont .cards .cardnav .jscardchild h4 {
+  margin-top: 1rem;
+  text-align: left;
+}
+main .maincont .cards .cardnav .jscardchild p {
+  margin-top: 2rem;
+  text-align: left;
+}
+main .maincont .cards .cardnav ::-webkit-scrollbar {
+  width: 5px;
+}
+main .maincont .cards .cardnav ::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgb(211, 211, 211);
+}
+main .maincont .cards .cardnav .jscards {
+  display: flex;
+  gap: 1rem;
+  overflow: auto;
+  padding: 1rem;
+  font-size: 2rem;
+}
+main .maincont .cards .cardnav .cardhover {
+  text-decoration: none;
+  color: black;
+}
+main .maincont .cards .cardnav .cardhover .js1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 3rem;
+  height: 43rem;
+  border: 1px solid rgb(226, 222, 222);
+  box-shadow: 2px 2px 5px 2px rgb(163, 156, 156);
+  border-radius: 1.5rem;
+  width: 25rem;
+}
+main .maincont .cards .cardnav .cardhover .js1 .cardimg {
+  height: 19rem;
+  border-radius: 1.5rem;
+}
+main .maincont .cards .cardnav .cardhover .js1 .cardimg img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1.5rem 1.5rem 0 0;
+  height: 100%;
+}
+main .maincont .cards .cardnav .cardhover .js1 h5, main .maincont .cards .cardnav .cardhover .js1 .cardstar, main .maincont .cards .cardnav .cardhover .js1 .cardname {
+  width: 80%;
+  margin: 0 auto;
+}
+main .maincont .cards .cardnav .cardhover .js1 .cardname {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+main .maincont .cards .cardnav .cardhover .js1 .cardstar {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: orange;
+  font-weight: bold;
+}
+main .maincont .cards .cardnav .cardhover .js1 .bestseller {
+  background-color: yellow;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(37, 37, 37);
+  width: 40%;
+}
+main .maincont .cards .cardnav .cardhover .js1 h5 {
+  text-align: left;
+}
+main .maincont .teachcard {
+  margin-top: 45rem;
+  padding: 3rem 2rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .maincont .teachcard img {
+  width: 100%;
+  height: 25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 2px 2px 10px 2px rgb(126, 126, 122);
+}
+main .maincont .teachcard .teachcardcont {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .maincont .teachcard .teachcardcont h3 {
+  font-size: 3rem;
+}
+main .maincont .teachcard .teachcardcont p {
+  font-size: 1.5rem;
+  justify-content: center;
+  margin: 3rem 0;
+}
+main .maincont .teachcard .teachcardcont .teachbutton {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: none;
+}
+main .maincont .topcats {
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem;
+}
+main .maincont .topcats h3 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+main .maincont .topcats .topcatscont {
+  width: 100%;
+  display: flex;
+  gap: 5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .maincont .topcats .topcatscont a {
+  text-decoration: none;
+}
+main .maincont .topcats .topcatscont a img {
+  padding: 1rem;
+  width: 36rem;
+  height: 40rem;
+  box-shadow: 0 0 10px 0 rgb(204, 201, 201);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .maincont .topcats .topcatscont a h4 {
+  margin: 4rem 0;
+  color: rgb(85, 84, 84);
+  font-size: 2rem;
+}
+main .maincont .topcats .topcatscont img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+  padding: 3rem;
+}
+
+@keyframes imgcard {
+  0% {
+    transform: translateX(2rem);
+  }
+  100% {
+    transform: translateX(20rem);
+  }
+}
+@keyframes closebutton {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@media (min-width: 768px) {
+  main .maincont .cards {
+    width: 80%;
+    margin: 8rem auto;
+  }
+  main .maincont .cards .cardnav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  main .maincont .cards .cardnav li {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom: none;
+  }
+  main .maincont .cards .cardnav li .closecard {
+    display: none;
+  }
+  main .maincont .cards .cardnav li .jscard1 {
+    width: 60vw;
+    display: flex;
+    margin-top: 2rem;
+  }
+  main .maincont .cards .cardnav li .jscard1 .jscardchild1 {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: 1px solid rgb(179, 175, 175);
+    background-color: white;
+    margin-top: 2rem;
+  }
+  main .maincont .cards .cardnav li .jscard2,
+  main .maincont .cards .cardnav li .jscard3,
+  main .maincont .cards .cardnav li .jscard4,
+  main .maincont .cards .cardnav li .jscard5,
+  main .maincont .cards .cardnav li .jscard6 {
+    display: none;
+  }
+  main .maincont .cards .cardnav li .js:hover ~ .jscard1 {
+    display: none;
+  }
+  main .maincont .cards .cardnav li .js:focus ~ .jscard {
+    width: 60vw;
+    display: flex;
+    position: absolute;
+    margin-top: 2rem;
+  }
+  main .maincont .cards .cardnav li .js:focus ~ .jscard .jscardchild {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 1px solid gray;
+    background-color: white;
+  }
+  main .maincont .cards .cardnav li .jscard2 {
+    transform: translateX(-10rem);
+  }
+  main .maincont .cards .cardnav li .jscard3 {
+    transform: translateX(-16rem);
+  }
+  main .maincont .cards .cardnav li .jscard4 {
+    transform: translateX(-23.5rem);
+  }
+  main .maincont .cards .cardnav li .jscard5 {
+    transform: translateX(-29rem);
+  }
+  main .maincont .cards .cardnav li .jscard6 {
+    transform: translateX(-39rem);
+  }
+  main .maincont .teachcard {
+    width: 80%;
+    margin-top: 60rem;
+    flex-direction: row;
+  }
+  main .maincont .teachcard img {
+    height: 45rem;
+  }
+  @keyframes imgcard {
+    0% {
+      width: 30%;
+      transform: translateX(15rem);
+    }
+    100% {
+      width: 20%;
+      transform: translateX(40rem);
+    }
+  }
+}
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 2rem;
+}
+footer .topfoot {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15rem;
+}
+footer .topfoot .topfootcont {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .topfoot .topfootcont ul li {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+footer .topfoot .topfootcont ul li a {
+  text-decoration: none;
+  color: white;
+}
+footer .topfoot .topfootcont ul li a:hover {
+  text-decoration: underline;
+}
+footer .topfoot .translate i {
+  margin-top: 1rem;
+  padding: 0.5rem 5rem 0.5rem 1rem;
+  border: 2px solid rgb(80, 77, 77);
+  text-align: left;
+  color: white;
+}
+footer .topfoot .translate i:hover {
+  background-color: rgb(161, 158, 158);
+}
+footer .topfoot .translate i::after {
+  content: "English";
+  color: rgb(228, 220, 220);
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 1rem;
+}
+footer .bottomfoot {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 769px) {
+  footer .topfoot .topfootcont {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0 2rem 0;
+  margin-top: 1rem;
+}
+form fieldset {
+  border: none;
+  text-align: center;
+}
+form fieldset legend {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+form .loginout a {
+  display: block;
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+  border: 2px solid black;
+  padding: 2rem;
+}
+form .loginout a i {
+  margin-right: 2rem;
+  font-size: 3rem;
+}
+form .loginout a .fa-google {
+  color: green;
+}
+form .loginout a .fa-facebook {
+  color: blue;
+}
+form .loginout a .fa-apple {
+  font-size: 3rem;
+  margin-right: 3.5rem;
+}
+form button, form #email,
+form #pass {
+  width: 80%;
+  margin: 2rem 1rem 2rem 3rem;
+  padding: 2rem;
+  color: black;
+  border: 2px solid black;
+}
+form #email::-moz-placeholder, form #pass::-moz-placeholder {
+  color: black;
+  font-size: 2rem;
+}
+form #email::placeholder,
+form #pass::placeholder {
+  color: black;
+  font-size: 2rem;
+}
+form button {
+  background-color: rgb(7, 163, 224);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 0;
+}
+form .forgot, form p {
+  border-bottom: 1px solid rgb(133, 128, 128);
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+}
+form .forgot a, form p a {
+  color: blue;
+  font-weight: bold;
+}
+form p {
+  border-bottom: 0;
+}
+
+footer {
+  height: 30rem;
+}
+footer .topfoot {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  form {
+    width: 30%;
+  }
+  form #email,
+  form #pass, form button {
+    margin: 2rem 1rem 2rem 5rem;
+  }
+}
+.coursemain {
+  width: 80%;
+  margin: 3rem auto;
+}
+.coursemain h2 {
+  margin-bottom: 4rem;
+}
+.coursemain .featuredcourse {
+  background-color: black;
+  padding: 8rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.coursemain .featuredcourse .featuredcont {
+  color: white;
+  width: 50%;
+  margin-left: 5rem;
+}
+.coursemain .featuredcourse .featuredcont h4 {
+  font-size: 3rem;
+}
+.coursemain .featuredcourse .featuredcont .featuredcontdes {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+.coursemain .featuredcourse .featuredcont p {
+  margin: 1rem 0;
+}
+.coursemain .featuredcourse .featuredimg {
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  right: 5rem;
+  top: 19rem;
+  padding-bottom: 10rem;
+  border: 2px solid white;
+  box-shadow: 0 0 0.8rem 0.5rem rgb(175, 174, 174);
+  margin-bottom: 5rem;
+}
+.coursemain .featuredcourse .featuredimg img {
+  width: 100%;
+  height: 25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.coursemain .featuredcourse .featuredimg h4 {
+  font-size: 3rem;
+  margin: 3rem 0;
+  margin-left: 2rem;
+}
+.coursemain .featuredcourse .featuredimg p {
+  font-size: 2rem;
+  margin: 4rem 0;
+  margin-left: 2rem;
+}
+.coursemain .featuredcourse .featuredimg a {
+  margin-left: 2rem;
+  color: blue;
+}
+.coursemain .featuredcourse .featuredimg .buy {
+  margin: 3rem 0;
+  text-decoration: none;
+  background-color: rgb(19, 38, 204);
+  padding: 3rem 10rem;
+  color: white;
+  font-weight: bold;
+  margin-left: 9rem;
+}
+.coursemain .coursedes {
+  margin-top: 4rem;
+}
+.coursemain .coursedes h4 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.coursemain .coursedes .coursedestab {
+  display: flex;
+  width: 50%;
+  font-size: 1.5rem;
+  gap: 2rem;
+}
+.coursemain .coursedes .coursedestab ul li {
+  list-style-type: circle;
+}
+
+.coursetop {
+  margin-top: 20rem;
+}
+.coursetop .coursecards {
+  width: 80%;
+  margin: 2rem 0;
+  display: flex;
+  gap: 2rem;
+}
+.coursetop .coursecards ul li {
+  display: flex;
+  flex-direction: column;
+}
+.coursetop .coursecards ul li .coursecardimg img {
+  width: 25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 15rem;
+}
+.coursetop .coursecards ul li .coursecardimgcont {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}/*# sourceMappingURL=main.css.map */

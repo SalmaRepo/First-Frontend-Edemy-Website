@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&family=Plus+Jakarta+Sans&Rubik:wght@100&family=Montserrat&family=Montserrat&family=Montserrat+Alternates:wght@900&display=swap");
+$fontfamilymain: "Rubik", sans-serif;
+$fontfamily: "Plus Jakarta Sans", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  $fontfamily: "Kumbh Sans", sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  scroll-behavior: smooth;
+}
+
+@import "header";
+
+main {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+  .topimg {
+    width: 100%;
+    padding: 15rem 0;
+    background: no-repeat top/100% url("../images/headerimg.jpg");
+    background-size: contain;
+    object-fit: cover;
+
+    h4 {
+      width: 30%;
+      font-size: 2rem;
+      color: rgb(10, 10, 10);
+      text-align: center;
+      background-color: rgba(181, 216, 223, 0.766);
+      filter: opacity(10px);
+      padding: 5rem 2rem;
+      font-family: 'Montserrat', sans-serif;
+      animation: imgcard 3s ease 0.5s forwards;
+    }
+  }
+
+
+  .topimg:hover {
+    background: no-repeat right bottom/100% url("../images/headerimg6.jpg");
+    object-fit: contain;
+    background-size: contain;
+    animation: secondimg 3s ease-in  3s;
+  }
+
+  @keyframes secondimg {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-0.5rem);
+    }
+  }
+
+  .maincont {
+    width: 80%;
+    margin: 0 auto;
+    .cards {
+      width: 100%;
+      margin: 7rem auto;
+      text-align: center;
+      padding-bottom: 10rem;
+
+      .cardnav {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        li {
+          list-style: none;
+          padding: 2rem 0;
+          border-bottom: 1px solid rgb(112, 109, 109);
+        }
+
+        .closecard {
+          font-size: 2rem;
+          display: inline;
+          position: absolute;
+          right: 0;
+        }
+
+        .closecard:focus {
+          animation: closebutton 0.5s ease backwards reverse;
+        }
+
+        .js {
+          text-decoration: none;
+          color: gray;
+          font-weight: bold;
+        }
+
+        .js:hover {
+          color: rgb(44, 43, 43);
+        }
+        %jscard {
+          background-color: white;
+          height: 80vh;
+          position: relative;
+          display: flex;
+        }
+
+        %jscardchild {
+          width: 100%;
+          padding: 2rem;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          background-color: white;
+          position: absolute;
+          left: 0;
+        }
+
+        .js:focus ~ .closecard {
+          animation: closebutton 0.5s ease forwards;
+        }
+
+        .jscard {
+          display: none;
+          position: absolute;
+          left: 0;
+        }
+
+        .js:focus ~ .jscard {
+          @extend %jscard;
+
+          .jscardchild {
+            @extend %jscardchild;
+          }
+        }
+        .closecard:focus .jscard {
+          display: none;
+        }
+
+        .jscardchild {
+          overflow: auto;
+          h4 {
+            margin-top: 1rem;
+            text-align: left;
+          }
+          p {
+            margin-top: 2rem;
+            text-align: left;
+          }
+        }
+
+        ::-webkit-scrollbar {
+          width: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          border-radius: 8px;
+          background-color: rgb(211, 211, 211);
+        }
+        .jscards {
+          display: flex;
+          gap: 1rem;
+          overflow: auto;
+          padding: 1rem;
+          font-size: 2rem;
+        }
+
+        .cardhover {
+          text-decoration: none;
+          color: black;
+          .js1 {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-bottom: 3rem;
+            height: 43rem;
+            border: 1px solid rgb(226, 222, 222);
+            box-shadow: 2px 2px 5px 2px rgb(163, 156, 156);
+            border-radius: 1.5rem;
+            width: 25rem;
+
+            .cardimg {
+              height: 19rem;
+              border-radius: 1.5rem;
+              img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 1.5rem 1.5rem 0 0;
+                height: 100%;
+              }
+            }
+
+            %cardcont{
+              width: 80%;
+              margin: 0 auto;
+            }
+
+            .cardname {
+              font-size: 1.5rem;
+              font-weight: bold;
+              @extend %cardcont;
+         
+            }
+            .cardstar {
+              font-size: 1.4rem;
+              @extend %cardcont;
+              font-weight: bold;
+              color: orange;
+              font-weight: bold;
+            }
+
+            .bestseller {
+              background-color: yellow;
+              padding: 0.5rem;
+              text-align: center;
+              border-radius: 1.5rem;
+              font-size: 1.2rem;
+              font-weight: bold;
+              color: rgb(37, 37, 37);
+              width: 40%;
+            
+            }
+
+            h5{
+              text-align: left;
+              @extend %cardcont;
+            }
+          }
+        }
+      }
+    }
+
+    .teachcard {
+      margin-top: 45rem;
+      padding: 3rem 2rem;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      img {
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+        box-shadow: 2px 2px 10px 2px rgb(126, 126, 122);
+      }
+
+      .teachcardcont {
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.5rem;
+          justify-content: center;
+          margin: 3rem 0;
+        }
+
+        .teachbutton {
+          background-color: black;
+          color: white;
+          padding: 2rem;
+          font-size: 1.8rem;
+          font-weight: bold;
+          border: none;
+        }
+      }
+    }
+
+    .topcats {
+      width: 100%;
+      margin: 0 auto;
+      padding: 3rem;
+      h3 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+      }
+      .topcatscont {
+        width: 100%;
+        display: flex;
+        gap: 5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        a {
+          text-decoration: none;
+          img {
+            padding: 1rem;
+            width: 36rem;
+            height: 40rem;
+            box-shadow: 0 0 10px 0 rgb(204, 201, 201);
+            object-fit: cover;
+          }
+          h4 {
+            margin: 4rem 0;
+            color: rgb(85, 84, 84);
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .topcatscont img:hover {
+        transform: scale(1.1);
+        transition: transform 0.2s ease;
+        padding: 3rem;
+      }
+    }
+  }
+}
+
+@keyframes imgcard {
+  0% {
+    
+    transform: translateX(2rem);
+  }
+
+ 
+
+  100% {
+    transform: translateX(20rem);
+
+    
+    
+  }
+}
+
+@keyframes closebutton {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    .maincont {
+      .cards {
+        width: 80%;
+        margin: 8rem auto;
+        .cardnav {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          position: relative;
+
+          li {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border-bottom: none;
+            .closecard {
+              display: none;
+            }
+
+            .jscard1 {
+              width: 60vw;
+              display: flex;
+              margin-top: 2rem;
+              .jscardchild1 {
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
+                border: 1px solid rgb(179, 175, 175);
+                background-color: white;
+                margin-top: 2rem;
+              }
+            }
+
+            .jscard2,
+            .jscard3,
+            .jscard4,
+            .jscard5,
+            .jscard6 {
+              display: none;
+            }
+
+            .js:hover ~ .jscard1 {
+              display: none;
+            }
+            .js:focus ~ .jscard {
+              width: 60vw;
+              display: flex;
+              position: absolute;
+              margin-top: 2rem;
+              .jscardchild {
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
+                margin-top: 2rem;
+                border: 1px solid gray;
+                background-color: white;
+              }
+            }
+
+            $translate: (
+              jscard2: translateX(-10rem),
+              jscard3: translateX(-16rem),
+              jscard4: translateX(-23.5rem),
+              jscard5: translateX(-29rem),
+              jscard6: translateX(-39rem),
+            );
+
+            @each $jscard, $trans in $translate {
+              .#{$jscard} {
+                transform: $trans;
+              }
+            }
+          }
+        }
+      }
+
+      .teachcard {
+        width: 80%;
+        margin-top: 60rem;
+        flex-direction: row;
+
+        img {
+          height: 45rem;
+        }
+      }
+    }
+  }
+
+
+  @keyframes imgcard {
+    0% {
+      width: 30%;
+      
+      transform: translateX(15rem);
+    }
+  
+   
+  
+    100% {
+      width: 20%;
+      transform: translateX(40rem);
+      
+      
+    }
+  }
+}
+
+@import "footer";
+@import "login";
+@import "courses";
+

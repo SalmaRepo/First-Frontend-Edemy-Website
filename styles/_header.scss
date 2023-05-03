@@ -1,0 +1,487 @@
+$fontfamily: "Plus Jakarta Sans", sans-serif;
+
+header {
+  width: 100%;
+  box-shadow: 0 0.5rem 8rem 3rem rgb(230, 225, 225);
+  font-size: 2rem;
+  padding: 2rem 0;
+
+  .offer-disp {
+    width: 100%;
+    background-color: rgba(177, 205, 216, 0.359);
+    padding: 1.5rem;
+    text-align: center;
+    color: rgb(23, 23, 24);
+
+    .offerDisptime {
+      color: blueviolet;
+      animation: offertime 1.5s ease-in-out 1s infinite forwards;
+      margin: 0 2px;
+    }
+  }
+
+  .logo {
+    text-decoration: none;
+    h1 {
+      font-family: "Montserrat Alternates", sans-serif;
+      color: rgb(9, 168, 168);
+      text-shadow: 2px 2px 2px black;
+      font-size: 4rem;
+    }
+  }
+  nav {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    .navStart {
+      .cathead {
+        display: none;
+        .catarrow {
+          font-size: 1.5rem;
+          margin-left: 1rem;
+          margin-top: 0.5rem;
+        }
+      }
+
+      .cathead:focus {
+        color: black;
+      }
+
+      .cathead:focus .catarrow {
+        transform: rotate(180deg);
+      }
+
+      .catarrow:focus .categories {
+        transform: rotate(180deg);
+      }
+    }
+
+    .burger {
+      text-decoration: none;
+    }
+
+    .burger i {
+      display: flex;
+      color: rgb(65, 62, 62);
+      font-size: 2.5rem;
+    }
+    .burger:focus ~ .categories {
+      display: inline-block;
+      overflow: auto;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .burger:focus ~ .closebutton {
+      display: inline;
+      position: absolute;
+      left: 28rem;
+      top: 2.5rem;
+      animation: burger 1s ease-in-out 0.5s backwards;
+      animation: closebutton 0.5s ease 0.3s forwards;
+    }
+
+    .categories {
+      display: none;
+      background-color: white;
+      padding: 1rem;
+      font-family: "Kumbh Sans", sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.05rem;
+      font-weight: bold;
+      text-align: justify;
+      animation: burger 1s ease forwards;
+
+      h5 {
+        display: none;
+      }
+      h4 {
+        font-size: 1.1rem;
+        padding-left: 0;
+        margin-top: 1rem;
+        text-align: left;
+        font-weight: bold;
+        color: rgb(109, 104, 104);
+      }
+      ul {
+        background-color: white;
+        margin-top: 1rem;
+        padding: 0 5rem 0.5rem 0;
+        border-bottom: 1px solid gray;
+
+        li {
+          list-style-type: none;
+          padding: 0.5rem 0;
+
+          a {
+            text-decoration: none;
+            color: rgba(51, 49, 49, 0.966);
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+              sans-serif;
+          }
+        }
+      }
+
+      .login {
+        li {
+          a {
+            color: blue;
+          }
+        }
+      }
+    }
+
+    .categories::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .categories::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background-color: rgb(144, 145, 146);
+    }
+
+    .closebutton {
+      display: none;
+      font-size: 2.5rem;
+      padding: 1rem 1.5rem;
+      background-color: rgba(255, 255, 255, 0.759);
+      border-radius: 50%;
+      border: 2px solid rgb(235, 226, 226);
+    }
+
+    .translate i {
+      margin-top: 1rem;
+      padding: 0.5rem 5rem 0.5rem 1rem;
+      border: 2px solid rgb(80, 77, 77);
+      text-align: left;
+    }
+  }
+
+  .translate i::after {
+    content: "English";
+    color: rgb(66, 64, 64);
+    font-family: "Courier New", Courier, monospace;
+    margin-left: 1rem;
+  }
+
+  .navend {
+    display: flex;
+    gap: 3rem;
+    i {
+      color: rgb(65, 62, 62);
+      font-size: 2rem;
+    }
+
+    .business,
+    .teach,
+    .logindesk,
+    .signin,
+    .desktranslate {
+      display: none;
+    }
+  }
+}
+
+@keyframes offertime {
+  from {
+    color: rgb(74, 116, 153);
+  }
+  to {
+    color: rgb(145, 63, 145);
+  }
+}
+
+@keyframes burger {
+  0% {
+    transform: translateX(-0.5rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes closebutton {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: translateX(1.5);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1279px) {
+  header {
+    nav {
+      padding: 0 1rem;
+      .navStart {
+        .burger {
+          i {
+            display: none;
+          }
+        }
+
+        .cathead {
+          display: flex;
+          color: rgb(32, 31, 31);
+          text-decoration: none;
+          font-size: 2rem;
+          font-weight: bold;
+          color: rgb(70, 68, 68);
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+          .cathead:hover {
+            color: blue;
+          }
+
+          .catarrow {
+            margin-left: 1rem;
+          }
+          .catarrow:hover {
+            transform: rotate(180deg);
+          }
+        }
+
+        .cathead:focus ~ .categories {
+          display: inline-block;
+          position: absolute;
+          height: 50vh;
+          animation: burgerdesk 0.5s ease-out 0.1s forwards;
+        }
+
+        .cathead:hover ~ .catarrow {
+          transform: rotate(180deg);
+        }
+
+        .catarrow:focus ~ .categories {
+
+          transform: rotate(180deg);
+        }
+
+        .categories {
+          margin-top: 2rem;
+          border: 1px solid rgb(165, 161, 161);
+          animation: none;
+          .popularCats {
+            border-bottom: none;
+            margin-top: 0.3rem;
+            padding-right: 5rem;
+
+            li {
+              a {
+                font-size: 1.3rem;
+                letter-spacing: 0;
+              }
+              a:hover {
+                color: blue;
+              }
+            }
+          }
+
+          .login,
+          h4,
+          .more,
+          .translate {
+            display: none;
+          }
+        }
+      }
+
+      .logo {
+        display: flex;
+        order: -1;
+      }
+
+      .navend {
+        gap: 1rem;
+        align-items: center;
+        justify-content: flex-end;
+        width: 80%;
+        .teach,
+        .logindesk,
+        .signin,
+        .desktranslate {
+          display: inline;
+          border: 1px solid black;
+          font-family: $fontfamily;
+          font-weight: bold;
+          padding: 0.5rem;
+          background-color: white;
+          font-size: 1.2rem;
+          justify-content: center;
+          text-decoration: none;
+        }
+
+        .logindesk{
+          color: black;
+        }
+
+        .teach,
+        .business {
+          border: 0;
+          color: gray;
+          font-size: 1.3rem;
+        }
+
+        .signin {
+          background-color: black;
+          color: white;
+        }
+
+        .fa-magnifying-glass {
+          order: -1;
+          width: 50%;
+          padding: 1rem;
+          border: 1px solid gray;
+          border-radius: 1.5rem;
+        }
+
+        .fa-magnifying-glass::after {
+          content: "search anything";
+          color: gray;
+          font-family: $fontfamily;
+          margin-left: 1rem;
+          font-size: 1.2rem;
+        }
+
+        .desktranslate {
+          padding-top: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes burgerdesk {
+  0% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+@media (min-width: 1280px) {
+  header {
+    nav {
+      font-size: 2rem;
+      padding: 0 1rem;
+      .navStart {
+        .burger {
+          i {
+            display: none;
+          }
+        }
+
+        .cathead {
+          display: flex;
+          color: rgb(32, 31, 31);
+          text-decoration: none;
+          font-size: 2rem;
+          font-weight: bold;
+          color: rgb(71, 71, 71);
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .cathead:focus ~ .categories {
+          display: inline-block;
+          position: absolute;
+          height: 50vh;
+        }
+
+        .categories {
+          margin-top: 2rem;
+          border: 1px solid rgb(165, 161, 161);
+          ul {
+            border-bottom: none;
+            margin-top: 1rem;
+
+            li {
+              a {
+                font-size: 1.5rem;
+                letter-spacing: 0;
+              }
+              a:hover {
+                color: blue;
+              }
+            }
+          }
+
+          .login,
+          h4,
+          .more,
+          .translate {
+            display: none;
+          }
+        }
+      }
+
+      .logo {
+        display: flex;
+        order: -1;
+      }
+
+      .navend {
+        gap: 1rem;
+        align-items: center;
+        justify-content: flex-end;
+        width: 80%;
+        .business,
+        .teach,
+        .logindesk,
+        .signin,
+        .desktranslate {
+          display: inline;
+          border: 1px solid black;
+          font-family: $fontfamily;
+          font-weight: bold;
+          padding: 0.5rem;
+          background-color: white;
+          font-size: 1.5rem;
+          justify-content: center;
+          text-decoration: none;
+        }
+        
+        .logindesk{
+          color: black;
+        }
+        .teach,
+        .business {
+          border: 0;
+          color: gray;
+          font-size: 1.5rem;
+        }
+
+        .signin {
+          background-color: black;
+          color: white;
+        }
+
+        .fa-magnifying-glass {
+          order: -1;
+          width: 50%;
+          padding: 1rem;
+          border: 1px solid gray;
+          border-radius: 1.5rem;
+        }
+
+        .fa-magnifying-glass::after {
+          content: "search anything";
+          color: gray;
+          font-family: $fontfamily;
+          margin-left: 1rem;
+          font-size: 1.5rem;
+        }
+
+        .desktranslate {
+          padding-top: 0.5rem;
+        }
+      }
+    }
+  }
+}
